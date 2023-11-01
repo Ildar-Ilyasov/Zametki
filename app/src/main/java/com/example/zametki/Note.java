@@ -37,8 +37,6 @@ public class Note extends AppCompatActivity {
                 data.putExtra("Theme", ThemeSend);
                 data.putExtra("Text", TextSend);
                 data.putExtra("pos", pos);
-                // дебаг
-                Toast.makeText(Note.this, ThemeSend + " | " + TextSend, Toast.LENGTH_SHORT).show();
                 // выставление результат
                 setResult(RESULT_OK, data);
                 // завершение работы активности

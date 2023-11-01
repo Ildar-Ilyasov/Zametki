@@ -46,8 +46,6 @@ public class MainActivity extends AppCompatActivity {
                         int pos = intent.getIntExtra("pos", 0);
                         String Theme = intent.getStringExtra("Theme");
                         String Text = intent.getStringExtra("Text");
-                        // дебаг
-                        Toast.makeText(MainActivity.this, Theme + " | " + Text, Toast.LENGTH_SHORT).show();
                         // выставялем новые данные
                         NotesThemes[pos] = Theme;
                         NotesText[pos] = Text;
