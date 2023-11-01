@@ -25,9 +25,13 @@ public class MainActivity extends AppCompatActivity {
     public String[] NotesThemes = {"Тема 1","Тема 2","Тема 3","Тема 4","Тема 5",};
     public String[] NotesText = {"dsfsdfsdf 1","sfadfsdvsd 2","sdfsdfsdf 3","sdfsdfsdf 4","dsfsdfds 5",};
 
-    public void SetData(int pos, String theme, String text){
-        NotesThemes[pos] = theme;
-        NotesText[pos] = text;
+    public void UpdateAdapter(){
+        listView = findViewById(R.id.list_view);
+
+        ArrayAdapter<String> adapter = new ArrayAdapter<>(this,
+                android.R.layout.simple_list_item_1, NotesThemes);
+        listView.setAdapter(adapter);
+
     }
 
     // получение результата
@@ -48,7 +52,7 @@ public class MainActivity extends AppCompatActivity {
                         NotesThemes[pos] = Theme;
                         NotesText[pos] = Text;
 
-                        //this.SetData(pos, Theme, Text);
+                        UpdateAdapter();
 
 
                     }

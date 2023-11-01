@@ -32,11 +32,13 @@ public class Note extends AppCompatActivity {
                 // создание интента
                 Intent data = new Intent();
                 // всталвяем данные
-                data.putExtra("Theme", EditText.getText());
-                data.putExtra("Text", EditText2.getText());
+                String ThemeSend = String.valueOf(EditText.getText());
+                String TextSend = String.valueOf(EditText2.getText());
+                data.putExtra("Theme", ThemeSend);
+                data.putExtra("Text", TextSend);
                 data.putExtra("pos", pos);
                 // дебаг
-                Toast.makeText(Note.this, data.getStringExtra("Theme") + " | " + EditText2.getText(), Toast.LENGTH_SHORT).show();
+                Toast.makeText(Note.this, ThemeSend + " | " + TextSend, Toast.LENGTH_SHORT).show();
                 // выставление результат
                 setResult(RESULT_OK, data);
                 // завершение работы активности
